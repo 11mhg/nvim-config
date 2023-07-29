@@ -16,11 +16,8 @@ return require('packer').startup(function(use)
   -- My plugins here
 
   use 'folke/tokyonight.nvim'
-  use {
-      "nvim-tree/nvim-tree.lua",
-      after = "nvim-web-devicons",
-      requires = "nvim-tree/nvim-web-devicons",
-  }
+  use "nvim-tree/nvim-tree.lua"
+  use "nvim-tree/nvim-web-devicons"
   use 'nvim-lualine/lualine.nvim'
 
   use 'nvim-treesitter/nvim-treesitter'
