@@ -43,6 +43,12 @@ return require('packer').startup(function(use)
     end,
     requires = "nvim-treesitter/nvim-treesitter",
   }
+
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'nvim-telescope/telescope-dap.nvim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
