@@ -8,7 +8,8 @@ require("mason-lspconfig").setup({
     "vtsls",
     "pyright",
     "yamlls",
-    "rust_analyzer"
+    "rust_analyzer",
+    "sqlls"
   }
 })
 
@@ -32,7 +33,13 @@ require("lspconfig").lua_ls.setup {
 }
 
 require("lspconfig").eslint.setup {
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr);
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      command = "EslintFixAll",
+    });
+  end,
   capabilities = capabilities,
 }
 
@@ -52,6 +59,11 @@ require("lspconfig").yamlls.setup {
 }
 
 require("lspconfig").rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require("lspconfig").sqlls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
