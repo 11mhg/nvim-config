@@ -7,5 +7,6 @@ require("core.plugin_config.lsp_config")
 require("core.plugin_config.completions")
 require("core.plugin_config.neogen")
 require("core.plugin_config.nvim-dap")
-
+require("core.plugin_config.nvim-dap-vscode-js")
+require("core.plugin_config.nvim-dap-ui")
 
