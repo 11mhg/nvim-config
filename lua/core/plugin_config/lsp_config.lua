@@ -2,14 +2,15 @@ require("mason").setup({
   PATH = "prepend",
  })
 require("mason-lspconfig").setup({
-  ensure_installed = { 
+  ensure_installed = {
     "lua_ls",
     "eslint",
     "vtsls",
     "pyright",
     "yamlls",
     "rust_analyzer",
-    "sqlls"
+    "sqlls",
+    "gopls"
   }
 })
 
@@ -26,6 +27,10 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+require("lspconfig").gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 
 require("lspconfig").lua_ls.setup {
   on_attach = on_attach,
