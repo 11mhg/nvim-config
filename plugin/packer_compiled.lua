@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/hamada/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["codeium.vim"] = {
+    loaded = true,
+    path = "/home/hamada/.local/share/nvim/site/pack/packer/start/codeium.vim",
+    url = "https://github.com/Exafunction/codeium.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/hamada/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",

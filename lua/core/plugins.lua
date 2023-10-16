@@ -59,6 +59,9 @@ return require('packer').startup(function(use)
 
   use { "mxsdev/nvim-dap-vscode-js", requires = { "mfussenegger/nvim-dap" } }
 
+  -- codeium
+  use 'Exafunction/codeium.vim'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
