@@ -1,9 +1,10 @@
 require("catppuccin").setup({
-    flavour = "machiatto", -- latte, frappe, macchiato, mocha
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",
         dark = "mocha",
     },
+		compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
     transparent_background = false, -- disables setting the background color.
     show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
     term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
