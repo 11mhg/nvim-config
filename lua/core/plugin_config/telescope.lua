@@ -7,4 +7,3 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = "List all open buffe
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "List available help tags" })
 
 vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = "List all normal mode keymappings" })
-
